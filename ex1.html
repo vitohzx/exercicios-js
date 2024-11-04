@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio</title>
+    <script src="ex1.js"></script>
+    <style>
+        #res7,
+        #res5,
+        #res4,
+        #res,
+        #med,
+        #par,
+        #im,
+        #res9,
+        #res9a,
+        #res9b,
+        #res10,
+        #res11,
+        #res2,
+        #res2b,
+        #res3,
+        #res3a,
+        #res6,
+        #res6a,
+        #res6b,
+        #res8a,
+        #res8b {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1> exercicio 1 </h1>
+
+        <form>
+            <p> Digite os numeros <input type="text" name="nu" id="n" autocomplete="off"> <input type="button"
+                    value="inserir" onclick="inserir()"> </p>
+
+            <input type="button" value="somar" onclick="soma()">
+            <input type="button" value="media" onclick="media()">
+            <input type="button" value="numeros pares e impares" onclick="num()">
+        </form>
+
+        <p>
+        <h3> resultado da soma dos valores: <span id="res"></span> </h3>
+        </p>
+
+        <p>
+        <h3> resultado da media aritmetica dos valores: <span id="med"></span> </span></h3>
+        </p>
+        <p>
+        <h3> numeros par: <span id="par"></span> </h3>
+        </p>
+        <p>
+        <h3> numeros impar: <span id="im"></span> </h3>
+        </p>
+        <br>
+    </div>
+
+    <div>
+        <h1>exercicio 2</h1>
+        <form>
+            <label for=""> Selecione temperatura </label>
+            <select name="temperatura" id="temperatura">
+                <option value="selecione"> selecione </option>
+                <option value="celsius"> celsius </option>
+                <option value="fahrenheit"> fahrenheit </option>
+            </select>
+            <br><br>
+            <label for="">Digite temperatura</label>
+            <input type="text" id="valor">
+            <br><br>
+            <input type="button" value="calcular" onclick="calctemp()">
+            <h3> <b>Resultado: <span id="res2"></span></b></h3>
+            <br>
+        </form>
+    </div>
+
+    <div>
+        <h1>exercicio 3</h1>
+        <form>
+            <p>Numero 1 <input type="number" id="nn1"></p>
+            <p>Numero 2 <input type="number" id="nn2"></p>
+            <p>Numero 3 <input type="number" id="nn3"></p>
+            <p>Numero 4 <input type="number" id="nn4"></p>
+            <p>Numero 5 <input type="number" id="nn5"></p>
+            <p>Numero 6 <input type="number" id="nn6"></p>
+            <p>Numero 7 <input type="number" id="nn7"></p>
+            <p>Numero 8 <input type="number" id="nn8"></p>
+            <p>Numero 9 <input type="number" id="nn9"></p>
+            <p>Numero 10 <input type="number" id="nn10"></p>
+            <p> <input type="button" value="maiores que a media" onclick="maior_media()"> <input type="button"
+                    value="menores que zero" onclick="menor_zero()"></p>
+            <h3> Numeros maiores que a media dos valores inseridos: <span id="res3"></span> </h3>
+            <h3> Numeros de elementos menores que 0: <span id="res3a"></span> </h3>
+            <br>
+        </form>
+    </div>
+
+    <div>
+        <h1>exercicio 4</h1>
+        <form>
+            <p> Digite a kilometragem percorrida pelo veiculo <input type="text" id="km"> </p>
+            <p> Digite o valor do combustivel <input type="text" id="combustivel"> </p>
+            <input type="button" value="calcular gasto" onclick="calcular4()">
+            <p>
+            <h3> Gasto da viagem: <span id="res4"></span> </h3>
+            </p>
+        </form>
+        <br>
+    </div>
+
+    <div>
+        <h1>exercicio 5</h1>
+        <form>
+            <p> Digite o comprimento do cômodo <input type="text" id="comp"> </p>
+            <p> Digite a largura do cômodo <input type="text" id="larg"> </p>
+            <input type="button" value="calcular custo" onclick="calcular5()">
+            <p>
+            <h3> Custo para assentar o piso: <span id="res5"></span> </h3>
+            </p>
+        </form>
+        <br>
+    </div>
+
+    <div>
+        <h1>exercicio 6</h1>
+        <h3>1. situação </h3>
+        <form>
+            <p>Digite a massa do objeto <input type="text" id="massa"></p>
+            <p>Digite a força aplicada no objeto <input type="text" id="a1"></p>
+            <p>Digite a força contraria aplicada no objeto <input type="text" id="a2"></p>
+            <input type="button" value="calcular forca resultante" onclick="calcular6()">
+            <p>
+            <h3> Força Resultante: <span id="res6"></span></h3>
+            </p>
+            <br>
+        </form>
+        <h3> 2. situação </h3>
+        <form>
+            <p>Digite a massa do objeto 1 <input type="text" id="massa1"></p>
+            <p>Digite a massa do objeto 2 <input type="text" id="massa2"></p>
+            <p>Digite a aceleração do objeto 1 <input type="text" id="ace1"></p>
+            <p>Digite a aceleração do objeto 2 <input type="text" id="ace2"></p>
+            <input type="button" value="calcular forca resultante e força de ação/reação" onclick="calcular6a()">
+            <p>
+            <h3> Força resultante: <span id="res6a"> </span> </h3>
+            </p>
+            <p>
+            <h3> Força de ação/reação <span id="res6b"> </span> </h3>
+            </p>
+            <br>
+        </form>
+
+    </div>
+
+    <div>
+        <h1>exercicio 7</h1>
+        <form>
+            <p>Digite a % de metal presente na liga <input type="text" id="metal"> </p>
+            <p>Digite a % de ametal presente na liga <input type="text" id="ametal"> </p>
+            <input type="button" value="calcular predominancia" onclick="calcular7()">
+            <p>
+            <h3> A liga predominante é: <span id="res7"></span> </h3>
+            </p>
+            <br>
+
+        </form>
+    </div>
+
+    <div>
+        <h1>exercicio 8</h1>
+        <h3>1. Formula Iônica</h3>
+        <form>
+            <p> Digite o simbolo do elemento (metal): <input type="text" id="element1"> &nbsp; &nbsp; Digite quantos
+                eletrons o metal ira perder: <input type="text" id="metal8"> </p>
+            <p> Digite o simbolo do elemento (ametal): <input type="text" id="element2"> &nbsp; &nbsp; Digite quantos
+                eletrons o ametal ira ganhar: <input type="text" id="ametal8"> </p>
+            <p> <input type="button" value="calcular formula iônica" onclick="ionica()"> </p>
+            <p>
+            <h3> Formula Iônica: <span id="res8a"></span> </h3>
+            </p>
+            <br>
+        </form>
+        <h3>2. Ligaçôes Covalentes</h3>
+    </div>
+    <form>
+        <p> Digite o simbolo do primeiro atomo: <input type="text" id="atomo1"> &nbsp; &nbsp; Digite quantas
+            ligações o primeiro atomo pode formar: <input type="text" id="atomo1a"> </p>
+        <p> Digite o simbolo do segundo atomo: <input type="text" id="atomo2"> &nbsp; &nbsp; Digite quantas
+            ligações o segundo atomo pode formar: <input type="text" id="atomo2a"> </p>
+        <p> <input type="button" value="calcular formula molecular" onclick="molecular()"> </p>
+        <p>
+        <h3> Formula molecular: <span id="res8b"> </span> </h3>
+        </p>
+        <br>
+    </form>
+    <div>
+        <h1>exercicio 9 </h1>
+        <form>
+            <p> Digite os numeros <input type="text" name="nu" id="n9" autocomplete="off"> <input type="button"
+                    value="inserir" onclick="inserir9()"> </p>
+            <p> <input type="button" value="mostrar numeros" onclick="mostrar()"> <input type="button"
+                    value="maior numero" onclick="maior()"> <input type="button" value="menor numero" onclick="menor()">
+            </p>
+            <p>
+            <h3>Os numeros inseridos foram: <span id="res9"></span></h3>
+            </p>
+            <p>
+            <h3>O maior numero inserido é: <span id="res9a"></span></h3>
+            </p>
+            <p>
+            <h3>O menor numero inserido é: <span id="res9b"></span></h3>
+            </p>
+            <br>
+        </form>
+    </div>
+
+    <div>
+        <h1>exercicio 10</h1>
+        <form>
+            <p>
+            <h3>Função f(x) = a ^ x </h3>
+            </p>
+            <p>Digite o valor de A <input type="text" id="a"> </p>
+            <p>Digite o valor de X <input type="text" id="x"> </p>
+            <p> <input type="button" value="calcular função" onclick="funcao()"> </p>
+            <p>
+            <h3>Resultado da função: <span id="res10"></span></h3>
+            </p>
+            <br>
+        </form>
+    </div>
+
+    <div>
+        <h1>exercicio 11</h1>
+        <form>
+            <p>Digite a % de metal presente na liga <input type="text" id="metal1"> </p>
+            <p>Digite a % de ametal presente na liga <input type="text" id="ametal1"> </p>
+            <input type="button" value="calcular predominancia" onclick="calcular11()">
+            <p>
+            <h3> A liga predominante é: <span id="res11"></span> </h3>
+            </p>
+            <br>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
